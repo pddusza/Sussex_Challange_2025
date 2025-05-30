@@ -1,3 +1,9 @@
+'''
+SHLData will provide data as follows:
+X: 500x1 size torch tensor in case of singlefile mode, and 500x9 size torch tensor in case of singlefolder mode
+   This represents a single row from file/files in selected sensor position
+y: 1x1 size torch tensor representing the median value of row in Label.txt file corresponding to time series datapoint
+'''
 from SHLData import SHLData
 from torch.utils.data import DataLoader
 shl_data_test = SHLData(root_path='../../data', flag='test', mode='singlefile')
